@@ -1,4 +1,4 @@
-import { skills } from "./data";
+import { skills } from "../assets/constants";
 
 export default function Skills  () {
     return (

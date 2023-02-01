@@ -1,18 +1,25 @@
-import { Link } from "react-router-dom";
+import { react, useStateHook } from 'react';
+import { Link } from 'react-router-dom';
+import Doggo from '../assets/doggo-small.png';
+import { navLinks } from '../assets/constants';
 
 function Navbar() {
     return (
-        <header className="bg-gray-800 md:sticky top-0 z-10">
-        <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-            <a className="title-font font-medium text-white mb-4 md:mb-0">
-            <Link to="/about">About</Link>
-            </a>
-            <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center">
-            <Link to="/projects">Projects</Link>
-            <Link to="/skills">Skills</Link>
-            </nav>
-        </div>
-        </header>
+        <nav className="w-full flex py-6 justify-between items-center navbar">
+            <img src={ Doggo } alt="doggo"
+            className='w-[64px] h-[64px]'/>
+            {/* Hidden for desktop */}
+            <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
+                {navLinks.map((nav, index) => (
+                    <li key={nav.id}
+                    className={`font-poppins font-normal cursor-pointer text-[16px] text-white ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10'}`}>
+                        <a href={`#${nav.id}`}>
+                            {nav.title}
+                        </a>
+                    </li>
+                ))}
+            </ul>
+        </nav>
   );
 }
 
