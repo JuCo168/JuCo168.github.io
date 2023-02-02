@@ -1,5 +1,7 @@
 ---
 name: Build and Deploy React App to GitHub Pages
+env:
+  CI: false
 on:
   push: 
     branches: [main]
