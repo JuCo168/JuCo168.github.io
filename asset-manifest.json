@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.css": "/juliusco.io/static/css/main.89d6a073.css",
-    "main.js": "/juliusco.io/static/js/main.1c7055fa.js",
+    "main.css": "/juliusco.io/static/css/main.e19cd580.css",
+    "main.js": "/juliusco.io/static/js/main.f80ecd43.js",
     "static/js/787.9813640b.chunk.js": "/juliusco.io/static/js/787.9813640b.chunk.js",
+    "static/media/doggo-full.png": "/juliusco.io/static/media/doggo-full.3263f6b0547bc66990bc.png",
+    "static/media/doggo-small.png": "/juliusco.io/static/media/doggo-small.d24ec59a2d8a4fcea504.png",
+    "static/media/close.svg": "/juliusco.io/static/media/close.c77f10e4c08d40af5f1ccf25a43b2ac5.svg",
+    "static/media/menu.svg": "/juliusco.io/static/media/menu.0b8796dcff6b9d88f160a5096039aa18.svg",
     "index.html": "/juliusco.io/index.html",
-    "main.89d6a073.css.map": "/juliusco.io/static/css/main.89d6a073.css.map",
-    "main.1c7055fa.js.map": "/juliusco.io/static/js/main.1c7055fa.js.map",
+    "main.e19cd580.css.map": "/juliusco.io/static/css/main.e19cd580.css.map",
+    "main.f80ecd43.js.map": "/juliusco.io/static/js/main.f80ecd43.js.map",
     "787.9813640b.chunk.js.map": "/juliusco.io/static/js/787.9813640b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.89d6a073.css",
-    "static/js/main.1c7055fa.js"
+    "static/css/main.e19cd580.css",
+    "static/js/main.f80ecd43.js"
   ]
 }
