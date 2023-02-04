@@ -1,5 +1,5 @@
 import { react, useState } from 'react';
-import { close, doggo_small, menu } from '../assets';
+import { close, doggoSmall, menu } from '../assets';
 import { navLinks } from '../assets/constants';
 
 function Navbar() {
@@ -7,7 +7,8 @@ function Navbar() {
 
     return (
         <nav className="w-full flex py-6 justify-between items-center navbar">
-            <img src={ doggo_small } alt="doggo"
+            
+            <img src={ doggoSmall } alt="doggo"
             className='w-[64px] h-[64px]'/>
             <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
                 {navLinks.map((nav, index) => (

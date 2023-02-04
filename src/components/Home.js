@@ -1,34 +1,38 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import styles from "../styles"
+import { doggoFull, doggoSmall } from "../assets";
+import About from "./About";
+import Tilt from "react-parallax-tilt"
 
 function Home() {
   return (
-    <section id="home">
-        <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
-          <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-              Hi, I'm Reed.
-              <br className="hidden lg:inline-block" />I love to build amazing
-              apps.
-            </h1>
-            <p className="mb-8 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
-              laborum quasi, incidunt dolore iste nostrum cupiditate voluptas?
-              Laborum, voluptas natus?
-            </p>
-            <div className="flex justify-center">
-            <Link to="/projects">Projects</Link>
-            </div>
-          </div>
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-            <img
-              className="object-cover object-center rounded"
-              alt="hero"
-              src="./coding.svg"
-            />
-          </div>
+    <section id="home" className={`flex md:flex-row flex-col ${styles.paddingY}`}>
+      <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
+        <div className="flex flex-row items-center py-[6px] px-4 bg-discount-gradient rounded-[10px] mb-2">
+          <img src={doggoSmall} alt="doggo" className="w-[32px] h-[32px]"/>
+          <p className={`${styles.paragraph} ml-2`}>
+            <span className="text-white">20%</span> Discount for {" "}
+            <span className="text-white">1 month</span> Account
+          </p>
         </div>
-      </section>
+
+        <div className="flex flex-row justify-between items-center w-full">
+          <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100px] leading-[75px]">
+            Hello there! <br/>
+            <span className="text-gradient">I'm Julius</span>
+          </h1>
+          <Tilt>
+            <div className="ss:flex hidden md:mr-4 mr-0">
+              <About/>
+            </div>
+          </Tilt>
+        </div>
+
+        <h1 className="font-poppins font-semibold ss:text-[68px] text-[52px] text-white ss:leading-[100px] leading-[75px] w-full">
+          Welcome to my portfolio!
+        </h1>
+      </div>
+    </section>
   );
 }
 

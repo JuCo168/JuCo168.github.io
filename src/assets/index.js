@@ -1,12 +1,13 @@
 import close from './close.svg'
-import doggo_full from './doggo-full.png'
-import doggo_small from './doggo-small.png'
+import doggoFull from './doggo-full.png'
+import doggoSmall from './doggo-small.png'
 import menu from './menu.svg'
-
+import arrowUp from "./arrow-up.svg"
 
 export {
     close,
-    doggo_full,
-    doggo_small,
-    menu
+    doggoFull,
+    doggoSmall,
+    menu,
+    arrowUp
 }

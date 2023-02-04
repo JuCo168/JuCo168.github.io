@@ -1,33 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import styles from "../styles";
+import { arrowUp } from "../assets";
 
-export default function About() {
-    return (
-        <section id="about">
-        <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
-          <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-              Hi, I'm Reed.
-              <br className="hidden lg:inline-block" />I love to build amazing
-              apps.
-            </h1>
-            <p className="mb-8 leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
-              laborum quasi, incidunt dolore iste nostrum cupiditate voluptas?
-              Laborum, voluptas natus?
-            </p>
-            <div className="flex justify-center">
-            <Link to="/projects">Projects</Link>
-            </div>
-          </div>
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-            <img
-              className="object-cover object-center rounded"
-              alt="hero"
-              src="./coding.svg"
-            />
-          </div>
+function About() {
+  return (
+    <div className={`${styles.flexCenter} w-[140px] h-[140px] rounded-full bg-blue-gradient p-[2px] cursor-pointer`}>
+      <div className={`${styles.flexCenter} flex-col bg-primary w-[100%] h-[100%] rounded-full`}>
+        <div className={`${styles.flexStart} flex-row`}>
+          <p className="font-poppins font-medium text-[18px] leading-[23px]">
+            <span className="text-gradient">About</span>
+          </p>
         </div>
-      </section>
-    );
+        <div className={`${styles.flexStart} flex-row`}>
+          <p className="font-poppins font-medium text-[18px] leading-[23px] mr-1">
+            <span className="text-gradient">Me</span>
+          </p>
+          <img src={arrowUp} alt="arrow" className="w-[23px] h-[23px] object-contain"/>
+        </div>
+      </div>
+    </div>
+  );
 }
+
+export default About
