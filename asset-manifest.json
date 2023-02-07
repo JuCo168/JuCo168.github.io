@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/juliusco.io/static/css/main.d479d92e.css",
-    "main.js": "/juliusco.io/static/js/main.c5c6958a.js",
+    "main.css": "/juliusco.io/static/css/main.17a31370.css",
+    "main.js": "/juliusco.io/static/js/main.ced83b3b.js",
     "static/js/787.9813640b.chunk.js": "/juliusco.io/static/js/787.9813640b.chunk.js",
-    "static/media/pdf.worker.js": "/juliusco.io/static/media/pdf.worker.8a711bf939872de17df5.js",
+    "static/media/pdf.worker.js": "/juliusco.io/static/media/pdf.worker.d86247cee2a0265330a9.js",
     "static/media/doggo-full.png": "/juliusco.io/static/media/doggo-full.3263f6b0547bc66990bc.png",
     "static/media/doggo-small.png": "/juliusco.io/static/media/doggo-small.d24ec59a2d8a4fcea504.png",
     "static/media/Resume 2.2.pdf": "/juliusco.io/static/media/Resume 2.2.6293ad104a0df27b9053.pdf",
@@ -11,12 +11,12 @@
     "static/media/menu.svg": "/juliusco.io/static/media/menu.0b8796dcff6b9d88f160a5096039aa18.svg",
     "static/media/arrow-up.svg": "/juliusco.io/static/media/arrow-up.4518f6b7e1bbff4c26d77e158730633d.svg",
     "index.html": "/juliusco.io/index.html",
-    "main.d479d92e.css.map": "/juliusco.io/static/css/main.d479d92e.css.map",
-    "main.c5c6958a.js.map": "/juliusco.io/static/js/main.c5c6958a.js.map",
+    "main.17a31370.css.map": "/juliusco.io/static/css/main.17a31370.css.map",
+    "main.ced83b3b.js.map": "/juliusco.io/static/js/main.ced83b3b.js.map",
     "787.9813640b.chunk.js.map": "/juliusco.io/static/js/787.9813640b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d479d92e.css",
-    "static/js/main.c5c6958a.js"
+    "static/css/main.17a31370.css",
+    "static/js/main.ced83b3b.js"
   ]
 }
