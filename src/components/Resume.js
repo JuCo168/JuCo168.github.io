@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from "../styles";
 import { Document, Page, pdfjs } from 'react-pdf';
+import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const resumeLink = 'https://raw.githubusercontent.com/JuCo168/JuCo168.github.io/main/src/assets/Resume%202.2.pdf'
