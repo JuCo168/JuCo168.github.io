@@ -18,11 +18,7 @@ function Toggle() {
   };
 
   useEffect(() => {
-    if (localStorage.getItem("theme") === "theme") {
-      setTogClass("dark");
-    } else if (localStorage.getItem("theme") === "theme") {
-      setTogClass("light");
-    }
+    localStorage.getItem("theme") === "light" ? setTogClass('light') : setTogClass('dark');
   }, [theme]);
 
   return (

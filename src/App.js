@@ -1,10 +1,11 @@
 import { React, createContext, useState, useEffect }from 'react';
 import styles from './styles'
 // import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import { Navbar, Home, Projects, Skills, About, Footer } from './components'
+import { Navbar, Home, Projects, Resume, About, Footer } from './components'
 import { keepTheme } from './components/themes';
 
 function App() {
+  // gets the current theme from localstorage
   useEffect(() => {
     keepTheme();
   })
@@ -26,8 +27,9 @@ function App() {
         <div className={`${styles.boxWidth}`}>
           {/* <Projects />
           <Skills />
-          <About />
-          <Footer /> */}
+          <About /> */}
+          <Resume />
+          <Footer />
         </div>
       </div>
     </div>

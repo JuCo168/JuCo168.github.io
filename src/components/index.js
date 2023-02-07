@@ -2,7 +2,7 @@ import Home from './Home'
 import About from './About'
 import Navbar from "./Navbar";
 import Projects from './Projects'
-import Skills from './Skills'
+import Resume from './Resume'
 import Footer from './Footer'
 
 // Allows for single-line import in App.js
@@ -12,6 +12,6 @@ export {
     About,
     Navbar,
     Projects,
-    Skills,
+    Resume,
     Footer
 };

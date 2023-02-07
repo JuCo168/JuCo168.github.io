@@ -20,6 +20,10 @@
   background-color: var(--color-primary);
 }
 
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
 .dark {
   --color-primary: #212844;
   --color-secondary: #374767;
