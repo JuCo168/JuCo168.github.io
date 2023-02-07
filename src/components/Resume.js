@@ -1,7 +1,7 @@
 import styles from "../styles";
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack5';
 
-const resumeLink = 'https://raw.githubusercontent.com/JuCo168/juliusco.io/main/src/assets/Resume%202.2.pdf'
+const resumeLink = 'https://raw.githubusercontent.com/JuCo168/JuCo168.github.io/main/src/assets/Resume%202.2.pdf'
 
 export default function Resume() {
     return (
