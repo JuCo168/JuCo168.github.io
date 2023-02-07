@@ -16,7 +16,7 @@ function Navbar() {
                 {navLinks.map((nav, index) => (
                     <li key={nav.id}
                     className={`font-poppins font-normal cursor-pointer text-[16px] mr-10`}>
-                        <a href={`#${nav.id}`}>
+                        <a href={`${nav.id}`}>
                             {nav.title}
                         </a>
                     </li>
@@ -41,7 +41,7 @@ function Navbar() {
                         {navLinks.map((nav, index) => (
                             <li key={nav.id}
                             className={`font-poppins font-normal cursor-pointer text-[16px] ${index === navLinks.length - 1 ? 'mb-0' : 'mb-4'}`}>
-                                <a href={`#${nav.id}`}>
+                                <a href={`${nav.id}`}>
                                     {nav.title}
                                 </a>
                             </li>

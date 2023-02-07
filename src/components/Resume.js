@@ -1,29 +1,19 @@
 import styles from "../styles";
-import { resume } from "../assets";
-import { Document, Page } from 'react-pdf';
-import { Navbar, Footer } from '.';
+import { Document, Page } from 'react-pdf/dist/esm/entry.webpack5';
+
+const resumeLink = 'https://raw.githubusercontent.com/JuCo168/juliusco.io/main/src/assets/Resume%202.2.pdf'
 
 export default function Resume() {
     return (
-      <div className={`w-full overflow-hidden`}>
-        <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-          <div className={`${styles.boxWidth}`}>
-            <Navbar />
-          </div>
-        </div>
-
-        <div className={`${styles.flexStart}`}>
-          <div className={`${styles.boxWidth}`}>
-            <Document file={resume}>
-            </Document>
-          </div>
-        </div>
-
-        <div className={`{styles.paddingX} ${styles.flexStart}`}>
-          <div className={`${styles.boxWidth}`}>
-            <Footer />
-          </div>
-        </div>
+      <div className="flex flex-col justify-center items-center">
+        <Document file={resumeLink} 
+        style={{
+          height: '200vh',
+          width: '200vw',
+          margin: 'auto',
+        }}>
+          <Page pageNumber={1} renderTextLayer={false} renderAnnotationLayer={false} />
+        </Document>
       </div>
-      );
+    );
 }
