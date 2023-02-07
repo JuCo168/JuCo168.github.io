@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { close, menu } from '../assets';
 import { navLinks } from '../assets/constants';
+import { Link } from 'react-router-dom'
 import styles from '../styles';
 import Toggle from './Toggle';
 
@@ -8,7 +9,7 @@ function Navbar() {
     const [toggle, setToggle] = useState(false)
     return (
         <nav className="w-full flex py-6 justify-between items-center navbar">
-            <div className={`${styles.flexCenter} w-[64px] h-[64px] rounded-full bg-blue-gradient p-[2px] cursor-pointer`}>
+            <div className={`${styles.flexCenter} w-[64px] h-[64px] rounded-full bg-secondary p-[2px] cursor-pointer`}>
                 <img src="https://media.licdn.com/dms/image/C5603AQEQ44dS9gwAXg/profile-displayphoto-shrink_400_400/0/1654752457532?e=1680739200&v=beta&t=OgxNwSr4lAoEvJfwYt7nT1dYCZ5WXEPMOa6X6EwWHKs" alt="profile"
                 className='w-[100%] h-[100%] rounded-full'/>
             </div>
@@ -16,9 +17,9 @@ function Navbar() {
                 {navLinks.map((nav, index) => (
                     <li key={nav.id}
                     className={`font-poppins font-normal cursor-pointer text-[16px] mr-10`}>
-                        <a href={`${nav.id}`}>
+                        <Link to={`/${nav.id}`}>
                             {nav.title}
-                        </a>
+                        </Link>
                     </li>
                 ))}
                 <li className={`cursor-pointer text-[16px] mr-0}`}>
@@ -41,9 +42,9 @@ function Navbar() {
                         {navLinks.map((nav, index) => (
                             <li key={nav.id}
                             className={`font-poppins font-normal cursor-pointer text-[16px] ${index === navLinks.length - 1 ? 'mb-0' : 'mb-4'}`}>
-                                <a href={`${nav.id}`}>
+                                <Link to={`/${nav.id}`}>
                                     {nav.title}
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>
