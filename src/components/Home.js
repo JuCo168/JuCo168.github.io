@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../styles"
+import styles from "../assets/styles"
 import { doggoSmall } from "../assets";
 import About from "./About";
 import Tilt from "react-parallax-tilt"

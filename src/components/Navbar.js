@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { close, menu } from '../assets';
 import { navLinks } from '../assets/constants';
 import { Link } from 'react-router-dom'
-import styles from '../styles';
+import styles from '../assets/styles';
 import Toggle from './Toggle';
 
 function Navbar() {

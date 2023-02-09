@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import styles from "../styles";
+import { BsDownload } from 'react-icons/bs'
 import { Document, Page, pdfjs } from 'react-pdf';
+import { resume } from '../assets';
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
@@ -18,6 +19,15 @@ export default function Resume() {
       <Document file={resumeLink} >
         <Page pageNumber={1} renderTextLayer={false} renderAnnotationLayer={false} scale={width > 768 ? 1.4 : 0.6}/>
       </Document>
+
+      <button className='bg-tertiary mt-6 py-2 px-4 rounded'>
+        <a href={resume} target='_blank' className='flex items-center'>
+          <BsDownload/>
+          <p className='ml-2'>
+          Download
+          </p>
+        </a>
+      </button>
     </div>
   );
 }

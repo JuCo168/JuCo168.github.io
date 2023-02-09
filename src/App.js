@@ -1,8 +1,8 @@
 import { React, useEffect }from 'react';
-import styles from './styles'
+import styles from './assets/styles'
 import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { Navbar, Home, Projects, Resume, About, Footer } from './components'
-import { keepTheme } from './components/themes';
+import { keepTheme } from './assets/themes';
 
 function App() {
   // gets the current theme from localstorage
@@ -11,7 +11,7 @@ function App() {
   })
   return (
     <Router>
-    <div className={`w-full overflow-hidden`}>
+    <div className={`w-full overflow-hidden min-h-screen`}>
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <Navbar />
@@ -30,7 +30,7 @@ function App() {
         </div>
       </div>
 
-      <div className={`{styles.paddingX} ${styles.flexStart}`}>
+      <div className={`${styles.paddingX} ${styles.flexStart} sticky top-[100vh]`}>
         <div className={`${styles.boxWidth}`}>
           <Footer />
         </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../styles';
+import styles from '../assets/styles';
 import { BsLinkedin, BsGithub, BsInstagram } from 'react-icons/bs'
 import { FaSteam } from 'react-icons/fa'
 
