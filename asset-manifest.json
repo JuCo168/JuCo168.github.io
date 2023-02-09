@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/static/css/main.2c86277d.css",
-    "main.js": "/static/js/main.9182ca52.js",
+    "main.js": "/static/js/main.3d010a44.js",
     "static/js/787.9813640b.chunk.js": "/static/js/787.9813640b.chunk.js",
     "static/media/doggo-full.png": "/static/media/doggo-full.3263f6b0547bc66990bc.png",
     "static/media/doggo-small.png": "/static/media/doggo-small.d24ec59a2d8a4fcea504.png",
     "static/media/Resume 2.2.pdf": "/static/media/Resume 2.2.6293ad104a0df27b9053.pdf",
     "static/media/close.svg": "/static/media/close.c77f10e4c08d40af5f1ccf25a43b2ac5.svg",
     "static/media/menu.svg": "/static/media/menu.0b8796dcff6b9d88f160a5096039aa18.svg",
-    "index.html": "/index.html",
     "static/media/arrow-up.svg": "/static/media/arrow-up.4518f6b7e1bbff4c26d77e158730633d.svg",
+    "index.html": "/index.html",
     "main.2c86277d.css.map": "/static/css/main.2c86277d.css.map",
-    "main.9182ca52.js.map": "/static/js/main.9182ca52.js.map",
+    "main.3d010a44.js.map": "/static/js/main.3d010a44.js.map",
     "787.9813640b.chunk.js.map": "/static/js/787.9813640b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2c86277d.css",
-    "static/js/main.9182ca52.js"
+    "static/js/main.3d010a44.js"
   ]
 }
