@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2c86277d.css",
-    "main.js": "/static/js/main.3d010a44.js",
+    "main.css": "/static/css/main.1b6c8dab.css",
+    "main.js": "/static/js/main.52bdbda2.js",
     "static/js/787.9813640b.chunk.js": "/static/js/787.9813640b.chunk.js",
     "static/media/doggo-full.png": "/static/media/doggo-full.3263f6b0547bc66990bc.png",
     "static/media/doggo-small.png": "/static/media/doggo-small.d24ec59a2d8a4fcea504.png",
@@ -10,12 +10,12 @@
     "static/media/menu.svg": "/static/media/menu.0b8796dcff6b9d88f160a5096039aa18.svg",
     "static/media/arrow-up.svg": "/static/media/arrow-up.4518f6b7e1bbff4c26d77e158730633d.svg",
     "index.html": "/index.html",
-    "main.2c86277d.css.map": "/static/css/main.2c86277d.css.map",
-    "main.3d010a44.js.map": "/static/js/main.3d010a44.js.map",
+    "main.1b6c8dab.css.map": "/static/css/main.1b6c8dab.css.map",
+    "main.52bdbda2.js.map": "/static/js/main.52bdbda2.js.map",
     "787.9813640b.chunk.js.map": "/static/js/787.9813640b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2c86277d.css",
-    "static/js/main.3d010a44.js"
+    "static/css/main.1b6c8dab.css",
+    "static/js/main.52bdbda2.js"
   ]
 }
