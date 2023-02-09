@@ -22,9 +22,15 @@ function Toggle() {
   }, [theme]);
 
   return (
-    <a onClick={handleOnClick}>
-        {theme === 'dark' ? <BsFillSunFill/> : <BsFillMoonStarsFill/>}
-    </a>
+    <div>
+      <a onClick={handleOnClick} className="sm:flex hidden">
+          {theme === 'dark' ? <BsFillSunFill/> : <BsFillMoonStarsFill/>}
+      </a>
+
+      <a onClick={handleOnClick} className="sm:hidden">
+        {theme === 'dark' ? 'Light mode' : 'Dark mode' }
+      </a>
+    </div>
   );
 }
 
