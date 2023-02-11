@@ -1,39 +1,56 @@
-import React from "react";
+import { React, useEffect, useState } from "react";
 import styles from "../assets/styles"
-import { doggoSmall } from "../assets";
-import About from "./About";
-import Tilt from "react-parallax-tilt"
+import { slides } from "../assets";
+import { SlArrowLeft, SlArrowRight } from 'react-icons/sl'
+import Carousel from "./Carousel";
+import Swipe from "react-easy-swipe";
 
 function Home() {
+  const [curIndex, setIndex] = useState(0)
+  const [pause, setPause] = useState(false)
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      if (pause === false) {
+        setIndex(curIndex => (curIndex + 1) % slides.length);
+      }}, 1500);
+
+    return () => clearInterval(intervalId);
+  });
+  const nextSlide = () => {
+    return setIndex(curIndex => (curIndex + 1) % slides.length)
+  }
+  const prevSlide = () => {
+    return setIndex(curIndex === 0 ? slides.length - 1 : curIndex - 1)
+  }
+
   return (
-    <section id="home" className={`flex md:flex-row flex-col ${styles.paddingY}`}>
-      <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
-        <div className="flex flex-row items-center py-[6px] px-4 bg-discount-gradient rounded-[10px] mb-2">
-          <img src={doggoSmall} alt="doggo" className="w-[32px] h-[32px]"/>
-          <p className={`${styles.paragraph} ml-2`}>
-            <span >20%</span> Discount for {" "}
-            <span >1 month</span> Account
-          </p>
-        </div>
-
-        <div className="flex flex-row justify-between items-center w-full">
-          <h1 className="flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] ss:leading-[100px] leading-[75px]">
-            Hello there! <br/>
-            <span className="text-gradient">I'm Julius</span>
-          </h1>
-          <Tilt>
-            <div className="ss:flex hidden md:mr-4 mr-0">
-              <About/>
+    <section id="home" className={`flex justify-center flex-col ${styles.paddingY}`}>
+      <div className="w-full h-[600px] flex overflow-hidden relative items-center justify-center">
+        <Swipe onSwipeLeft={prevSlide} onSwipeRight={nextSlide}>
+          { slides.map((slide, index) => (
+            <div className={ index === curIndex ? `object-cover relative ${slide.pos}-[${slide.px}px]` : 'hidden' }>
+              <img src={slide.image} alt={slide.label} key={index} 
+                onMouseEnter={() => { setPause(true) }}
+                onMouseLeave={() => { setPause(false) }}/>
             </div>
-          </Tilt>
+          ))}
+        </Swipe>
+        {/* slide indicators */}
+        <div className="absolute w-full flex justify-center bottom-0">
+          {slides.map((_, index) => (
+            <div className={ index === curIndex
+                ? "h-2 w-2 bg-tertiary rounded-full mx-2 mb-2 cursor-pointer"
+                : "h-2 w-2 bg-white rounded-full mx-2 mb-2 cursor-pointer" }
+              key={index} onClick={() => { setIndex(index) }}/>
+          ))}
         </div>
-
-        <h1 className="font-poppins font-semibold ss:text-[68px] text-[52px] ss:leading-[100px] leading-[75px] w-full">
-          Welcome to my portfolio!
-        </h1>
+        {/* left and right buttons */}
+        <SlArrowLeft onClick={prevSlide} className='absolute left-0 text-3xl inset-y-1/2 text-white cursor-pointer' />
+        <SlArrowRight onClick={nextSlide} className='absolute right-0 text-3xl inset-y-1/2 text-white cursor-pointer' />
       </div>
     </section>
   );
+  
 }
 
 export default Home;

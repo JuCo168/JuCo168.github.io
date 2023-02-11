@@ -3,7 +3,7 @@ import styles from '../assets/styles';
 import { BsLinkedin, BsGithub, BsInstagram } from 'react-icons/bs'
 import { FaSteam } from 'react-icons/fa'
 
-export default function Footer() {
+function Footer() {
     return (
         <footer className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
             <div className='w-full flex justify-between items-center md:flex-row flex-col pt-6'>
@@ -29,3 +29,5 @@ export default function Footer() {
         </footer>
     );
 }
+
+export default Footer;

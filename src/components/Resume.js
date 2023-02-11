@@ -16,11 +16,7 @@ export default function Resume() {
 
   return (
     <div className="flex flex-col justify-center items-center mx-auto">
-      <Document file={resumeLink} >
-        <Page pageNumber={1} renderTextLayer={false} renderAnnotationLayer={false} scale={width > 768 ? 1.4 : 0.6}/>
-      </Document>
-
-      <button className='bg-tertiary mt-6 py-2 px-4 rounded'>
+      <button className='bg-tertiary mb-6 py-2 px-6 rounded'>
         <a href={resume} target='_blank' className='flex items-center'>
           <BsDownload/>
           <p className='ml-2'>
@@ -28,6 +24,10 @@ export default function Resume() {
           </p>
         </a>
       </button>
+
+      <Document file={resumeLink} >
+        <Page pageNumber={1} renderTextLayer={false} renderAnnotationLayer={false} scale={width > 768 ? 1.4 : 0.6}/>
+      </Document>
     </div>
   );
 }
