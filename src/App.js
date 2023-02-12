@@ -11,7 +11,7 @@ function App() {
   })
   return (
     <Router>
-    <div className='w-full flex flex-col overflow-hidden h-screen'>
+    <div className='w-full flex flex-col overflow-auto h-screen'>
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <Navbar />
