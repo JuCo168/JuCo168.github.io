@@ -1,7 +1,5 @@
-import close from './close.svg'
 import doggoFull from './doggo-full.png'
 import doggoSmall from './doggo-small.png'
-import menu from './menu.svg'
 import arrowUp from "./arrow-up.svg"
 import resume from "./Resume 2.2.pdf"
 import profile from './profile.png'
@@ -11,10 +9,8 @@ import pc from './slides/pc.jpg'
 import peiwenie from './slides/peiwenie.jpg'
 
 export {
-    close,
     doggoFull,
     doggoSmall,
-    menu,
     arrowUp,
     resume,
     profile

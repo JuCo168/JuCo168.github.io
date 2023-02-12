@@ -5,7 +5,7 @@ import { FaSteam } from 'react-icons/fa'
 
 function Footer() {
     return (
-        <footer className={`${styles.flexCenter} ${styles.paddingY} flex-col`}>
+        <footer className={`${styles.flexCenter} py-4 flex-col`}>
             <div className='w-full flex justify-between items-center md:flex-row flex-col pt-6'>
                 <p className='font-poppins font-medium text-center text-[18px] leading-[27px]'>
                     Developed by Julius Co

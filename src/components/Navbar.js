@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { close, menu } from '../assets';
 import { navLinks } from '../assets/constants';
 import { Link } from 'react-router-dom'
 import styles from '../assets/styles';
@@ -15,7 +14,7 @@ function Navbar() {
                 className='w-[100%] h-[100%] rounded-full'/>
             </div>
             <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
-                {navLinks.map((nav, index) => (
+                {navLinks.map((nav, _) => (
                     <li key={nav.id}
                     className={`font-poppins font-normal cursor-pointer text-[16px] mr-10`}>
                         <Link to={`/${nav.id}`}>
@@ -36,7 +35,7 @@ function Navbar() {
                     className={`${toggle ? 'flex' : 'hidden'} p-6 bg-tertiary absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
                 >
                     <ul className='list-none flex flex-col justify-end items-center flex-1'>
-                        {navLinks.map((nav, index) => (
+                        {navLinks.map((nav, _) => (
                             <li key={nav.id}
                             className={`font-poppins font-normal cursor-pointer text-[16px] mb-4`}>
                                 <Link to={`/${nav.id}`}>
