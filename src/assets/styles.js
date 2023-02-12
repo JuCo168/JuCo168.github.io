@@ -1,18 +1,23 @@
 const styles = {
-    boxWidth: "xl:max-w-[1280px] w-full",
+    boxWidth: 'xl:max-w-[1280px] w-full',
   
-    heading2: "font-poppins font-semibold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px] w-full",
-    paragraph: "font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px]",
+    heading2: 'font-poppins font-semibold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px] w-full',
+    paragraph: 'font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px]',
   
-    flexCenter: "flex justify-center items-center",
-    flexStart: "flex justify-center items-start",
+    flexCenter: 'flex justify-center items-center',
+    flexStart: 'flex justify-center items-start',
   
-    paddingX: "sm:px-16 px-6",
-    paddingY: "sm:py-16 py-6",
-    padding: "sm:px-16 px-6 sm:py-12 py-4",
+    paddingX: 'sm:px-16 px-6',
+    paddingY: 'sm:py-16 py-6',
+    padding: 'sm:px-16 px-6 sm:py-12 py-4',
   
-    marginX: "sm:mx-16 mx-6",
-    marginY: "sm:my-16 my-6",
+    marginX: 'sm:mx-16 mx-6',
+    marginY: 'sm:my-16 my-6',
+
+    skillRing: 'transition ease-in-out delay-100 duration-150 flex ring-4 rounded-md justify-center items-center hover:scale-110',
+    skill: 'w-[36px] h-[36px] md:w-[64px] md:h-[64px] my-1 md:my-8',
+
+    socials: 'w-[21px] h-[21px] object-contain cursor-pointer'
   };
   
   export const layout = {

@@ -11,14 +11,14 @@ function App() {
   })
   return (
     <Router>
-    <div className={`w-full overflow-hidden min-h-screen`}>
+    <div className='w-full flex flex-col overflow-hidden h-screen'>
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <Navbar />
         </div>
       </div>
       
-      <div className={`${styles.flexStart}`}>
+      <div className={`${styles.flexStart} mb-auto`}>
         <div className={`${styles.boxWidth}`}>
           <Routes>
             <Route path='/' element={<Home />} />
@@ -30,7 +30,7 @@ function App() {
         </div>
       </div>
 
-      <div className={`${styles.paddingX} ${styles.flexStart} sticky top-[100vh]`}>
+      <div className={`${styles.paddingX} ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
           <Footer />
         </div>
