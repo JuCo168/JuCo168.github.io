@@ -4,6 +4,7 @@ import { navLinks } from '../assets/constants';
 import { Link } from 'react-router-dom'
 import styles from '../assets/styles';
 import Toggle from './Toggle';
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
 
 function Navbar() {
     const [toggle, setToggle] = useState(false)
@@ -28,13 +29,9 @@ function Navbar() {
             </ul>
 
             <div className="sm:hidden flex flex-1 justify-end items-center">
-                <img 
-                    src={toggle ? close : menu }
-                    alt="menu"
-                    className="w-[28px] h-[28px] object-contain"
-                    onClick={() => setToggle((prev) => !prev)}
-                />
-
+                <div className="object-contain" onClick={() => setToggle((prev) => !prev)}>
+                    {toggle ? <AiOutlineClose className='w-[20px] h-[20px]'/> : <AiOutlineMenu className='w-[20px] h-[20px]'/>}
+                </div>
                 <div
                     className={`${toggle ? 'flex' : 'hidden'} p-6 bg-tertiary absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
                 >

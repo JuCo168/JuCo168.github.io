@@ -4,6 +4,7 @@ import doggoSmall from './doggo-small.png'
 import menu from './menu.svg'
 import arrowUp from "./arrow-up.svg"
 import resume from "./Resume 2.2.pdf"
+import profile from './profile.png'
 import bundestag from './slides/bundestag.jpg'
 import gundam from './slides/gundam.jpg'
 import pc from './slides/pc.jpg'
@@ -15,7 +16,8 @@ export {
     doggoSmall,
     menu,
     arrowUp,
-    resume
+    resume,
+    profile
 }
 
 export const slides = [
