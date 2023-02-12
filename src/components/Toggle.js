@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { setTheme } from "../assets/themes";
-import ReactSwitch from "react-switch";
 import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/bs'
 
 function Toggle() {
