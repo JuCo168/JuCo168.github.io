@@ -17,7 +17,7 @@ function Home() {
         pagination={{ clickable: true, dynamicBullets: true, }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="w-full h-full mx-auto">
+        className="w-full h-full mx-auto ring-4 rounded-md">
         { slides.map((slide, index) => (
           <SwiperSlide className={`block object-cover w-full h-full ${slide.pos}-[${slide.px}px]`}>
             <img src={slide.image} alt={slide.desc} key={index} />

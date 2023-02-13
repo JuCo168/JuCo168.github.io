@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { doggoSmall } from "../assets";
 import { navLinks } from "../assets/constants";
 import { Link } from "react-router-dom";
 import styles from "../assets/styles";
@@ -11,7 +12,7 @@ function Navbar() {
     <nav className="w-full flex py-6 justify-between items-center navbar">
       {/* large-screen navbar */}
       <div className={`${styles.flexCenter} w-[64px] h-[64px] rounded-full bg-secondary p-[2px] cursor-pointer`} >
-        <img src="https://media.licdn.com/dms/image/C5603AQEQ44dS9gwAXg/profile-displayphoto-shrink_400_400/0/1654752457532?e=1680739200&v=beta&t=OgxNwSr4lAoEvJfwYt7nT1dYCZ5WXEPMOa6X6EwWHKs"
+        <img src={doggoSmall}
           alt="profile"
           className="w-[100%] h-[100%] rounded-full" />
       </div>
