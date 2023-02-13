@@ -15,7 +15,7 @@ export default function Resume() {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center mx-auto">
+    <div className="flex flex-col justify-center items-center mx-auto overflow-y-scroll">
       <button className='bg-tertiary mb-6 py-2 px-6 rounded'>
         <a href={resume} className='flex items-center' target='_blank' rel='noreferrer'>
           <BsDownload/>

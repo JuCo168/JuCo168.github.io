@@ -1,3 +1,5 @@
+import vigenere_decipher from './projects/vigenere_decipher.png'
+
 export const navLinks = [
     {
         id: "home",
@@ -18,7 +20,20 @@ export const navLinks = [
 ];
 
 export const projects = [
-    
+    {
+      title: "Vigenere Decipher",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+      image: vigenere_decipher,
+      link: "https://github.com/JuCo168/Vigenere-decipher",
+    },
+    {
+        title: "Vigenere Decipher 2",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+        image: vigenere_decipher,
+        link: "https://github.com/JuCo168/Vigenere-decipher",
+      },
   ];
 
 export const skills = [
