@@ -1,6 +1,7 @@
 import React from "react";
 import { SiPython, SiJavascript, SiJava, SiLinux, SiReact, SiC, SiTailwindcss } from 'react-icons/si';
 import styles from "../assets/styles";
+import { skills } from "../assets/constants";
 import { profile } from "../assets";
 
 function About() {
@@ -16,30 +17,14 @@ function About() {
       </div>
       <br/>
       <div className="w-full md:mt-12 grid grid-cols-4 md:grid-cols-6 gap-4 md:gap-8">
-        <div className={styles.skillRing}>
-          <SiPython className={styles.skill}/>
-        </div>
-        <div className={styles.skillRing}>
-          <SiJava className={styles.skill}/>
-        </div>
-        <div className={styles.skillRing}>
-          <SiLinux className={styles.skill}/>
-        </div>
-        <div className={styles.skillRing}>
-          <SiJavascript className={styles.skill}/>
-        </div>
-        <div className={styles.skillRing}>
-          <SiReact className={styles.skill}/>
-        </div>
-        <div className={styles.skillRing}>
-          <SiC className={styles.skill}/>
-        </div>
-        <div className={styles.skillRing}>
-          <SiTailwindcss className={styles.skill}/>
-        </div>
+        { skills.map((skill) => (
+          <div className='transition ease-in-out delay-100 duration-150
+            flex ring-4 rounded-md justify-center items-center hover:scale-110'>
+            {skill.icon}
+          </div>
+        ))}
       </div>
     </div>
-    
   );
 }
 

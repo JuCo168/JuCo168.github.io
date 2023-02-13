@@ -14,7 +14,6 @@ const styles = {
     marginX: 'sm:mx-16 mx-6',
     marginY: 'sm:my-16 my-6',
 
-    skillRing: 'transition ease-in-out delay-100 duration-150 flex ring-4 rounded-md justify-center items-center hover:scale-110',
     skill: 'w-[36px] h-[36px] md:w-[64px] md:h-[64px] my-1 md:my-8',
 
     socials: 'w-[21px] h-[21px] object-contain cursor-pointer'

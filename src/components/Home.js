@@ -9,6 +9,7 @@ import { slides } from "../assets";
 function Home() {
   return (
     <section id="home" className={`flex justify-center flex-col py-2 sm:py-12`}>
+      {/* image carousel */}
       <Swiper slidesPerView={1}
         spaceBetween={0}
         autoplay={{ delay: 1700, disableOnInteraction: false, }}
