@@ -37,8 +37,6 @@ export const projects = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius? Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
     image: vigenere_decipher,
     link: "https://github.com/JuCo168/Vigenere-decipher",
-    scale: 'w-[300%] h-[300%]',
-    position: '-5px -8px'
   },
   {
     title: "Vigenere Decipher 2",

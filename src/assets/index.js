@@ -20,25 +20,17 @@ export const slides = [
     {
         image: bundestag,
         desc: 'The Reichstag building in Berlin!',
-        pos: 'bottom',
-        px: 70
     },
     {
         image: gundam,
         desc: 'RX-79-2 from a Bandai pop-up store in San Diego',
-        pos: 'bottom',
-        px: 50
     },
     {
         image: pc,
         desc: 'NCASE M1 | 5600X | EVGA FTW3 3060Ti',
-        pos: 'top',
-        px: 75
     },
     {
         image: peiwenie,
         desc: '@peiwenie!',
-        pos: 'bottom',
-        px: 0
     }
 ]

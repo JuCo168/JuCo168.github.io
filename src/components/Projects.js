@@ -19,9 +19,9 @@ export default function Projects() {
               <p className="text-center p-2">
                 {project.description}
               </p>
-              <div className="h-auto overflow-hidden rounded-b-md">
+              <div className="h-auto w-full overflow-hidden rounded-b-md">
                 <img src={project.image}
-                  className="w-[400%] h-[400%] object-cover" style={{ objectPosition: '-5px -200px'}}/>
+                  className='w-full object-cover'/>
               </div>
             </a>
           ))}
