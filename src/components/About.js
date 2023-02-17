@@ -1,6 +1,4 @@
 import React from "react";
-import { SiPython, SiJavascript, SiJava, SiLinux, SiReact, SiC, SiTailwindcss } from 'react-icons/si';
-import styles from "../assets/styles";
 import { skills } from "../assets/constants";
 import { profile } from "../assets";
 
