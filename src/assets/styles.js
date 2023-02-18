@@ -16,7 +16,9 @@ const styles = {
 
   skill: 'w-[36px] h-[36px] md:w-[64px] md:h-[64px] my-1 md:my-8',
 
-  socials: 'w-[21px] h-[21px] object-contain cursor-pointer'
+  socials: 'w-[21px] h-[21px] object-contain cursor-pointer',
+
+  navLinks: 'sm:hidden font-poppins font-semibold cursor-pointer text-[24px]',
 };
   
 export const layout = {

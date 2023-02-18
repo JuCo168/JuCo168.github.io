@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import styles from "../assets/styles";
 import { setTheme } from "../assets/themes";
 import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/bs'
 
@@ -22,11 +23,13 @@ function Toggle() {
 
   return (
     <div>
+      {/* Desktop theme button */}
       <a onClick={handleOnClick} className="sm:flex hidden">
           {theme === 'dark' ? <BsFillSunFill/> : <BsFillMoonStarsFill/>}
       </a>
 
-      <a onClick={handleOnClick} className="sm:hidden">
+      {/* Mobile theme button */}
+      <a onClick={handleOnClick} className={styles.navLinks}>
         {theme === 'dark' ? 'Light mode' : 'Dark mode' }
       </a>
     </div>
