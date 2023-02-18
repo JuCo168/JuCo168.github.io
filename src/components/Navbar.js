@@ -9,12 +9,14 @@ import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 function Navbar() {
   const [toggle, setToggle] = useState(false);
   return (
-    <nav className="w-full flex py-6 justify-between items-center navbar">
+    <nav className="w-full flex py-2 justify-between items-center">
       {/* Desktop navbar */}
-      <div className={`${styles.flexCenter} w-[64px] h-[64px] rounded-full bg-secondary p-[2px] cursor-pointer`} >
-        <img src={doggoSmall}
-          alt="profile"
-          className="w-[100%] h-[100%] rounded-full" />
+      <div className={`${styles.flexCenter} w-[56px] h-[56px] sm:w-[60px] sm:h-[60px] rounded-full bg-secondary p-[2px] cursor-pointer`} >
+        <Link to='/'>
+          <img src={doggoSmall}
+            alt="profile"
+            className="sm:w-[100%] sm:h-[100%] rounded-full" />
+        </Link>
       </div>
       <ul className="list-none sm:flex hidden justify-end items-center flex-1 space-x-10">
         {navLinks.map((nav) => (
@@ -38,7 +40,7 @@ function Navbar() {
         </div>
       </div>
       <div className={`${ toggle ? "translate-x-0" : "translate-x-full"} 
-          transition-transform top-0 right-0 w-full h-full fixed overflow-auto bg-tertiary
+          transition-transform top-0 right-0 w-auto h-full fixed overflow-hidden bg-tertiary
           flex flex-col items-end py-12 px-6 z-30`}>
           <ul className="list-none flex flex-col justify-start items-end flex-1 space-y-6 mt-8"
             onClick={() => setToggle((prev) => !prev)}>

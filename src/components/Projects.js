@@ -1,4 +1,3 @@
-import styles from "../assets/styles";
 import { projects } from "../assets/constants";
 
 export default function Projects() {
@@ -23,6 +22,7 @@ export default function Projects() {
               </p>
               <div className="h-auto w-full overflow-hidden rounded-b-md">
                 <img src={project.image}
+                  alt={project.title}
                   className='w-full object-cover'/>
               </div>
             </a>
