@@ -39,10 +39,8 @@ function Navbar() {
             )}
         </div>
       </div>
-      <div className={`h-screen w-screen overflow-hidden inset-0 fixed sm:hidden backdrop-blur-sm bg-black/40 ${toggle ? 'z-20' : 'hidden'}`}
-        onClick={() => setToggle((prev) => !prev)} />
       <div className={`${toggle ? 'translate-x-0' : 'translate-x-full'} 
-          transition-transform top-0 right-0 w-auto h-screen overflow-hidden fixed bg-tertiary
+          transition-transform top-0 right-0 w-full h-full overflow-hidden fixed bg-tertiary
           flex flex-col items-end py-12 px-6 z-30`}>
           <ul className='list-none flex flex-col justify-start items-end flex-1 space-y-6 mt-8'>
             {navLinks.map((nav) => (
