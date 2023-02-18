@@ -39,7 +39,7 @@ function Navbar() {
             )}
         </div>
       </div>
-      <div className={`h-screen w-screen top-0 left-0 absolute sm:hidden blur-sm bg-black/40 ${toggle ? 'z-20' : 'hidden'}`}
+      <div className={`h-screen w-screen inset-0 absolute sm:hidden blur-sm bg-black/40 ${toggle ? 'z-20' : 'hidden'}`}
         onClick={() => setToggle((prev) => !prev)} />
       <div className={`${toggle ? 'translate-x-0' : 'translate-x-full'} 
           transition-transform top-0 right-0 w-auto h-full fixed bg-tertiary
