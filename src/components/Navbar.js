@@ -10,7 +10,7 @@ function Navbar(props) {
   const [toggle, setToggle] = useState(false);
   const toggleNavbar = () => {
     setToggle((prev) => !prev)
-    toggle ? props.setOuter('overflow-auto') : props.setOuter('overflow-hidden touch-none') 
+    toggle ? props.setOuter('') : props.setOuter('overflow-hidden touch-none') 
   }
   return (
     <nav className='w-full flex py-2 justify-between items-center'>

@@ -5,15 +5,38 @@ import { Navbar, Home, Projects, Resume, About, Footer } from './components'
 import { keepTheme } from './assets/themes';
 
 function App() {
-  const [overflow, setOverflow] = useState('overflow-auto');
+  // used to display navbar
+  const [visible, setVisibility] = useState(true);
+  // used to save last scroll position
+  const [lastScrollY, setLastScrollY] = useState(0);
+  // handles behavior on scroll
+  const handleScroll = () => {
+    const currentScrollPos = window.scrollY;
+    const navbarHeight = document.getElementById('navbar').offsetHeight;
+
+    if (currentScrollPos > navbarHeight && currentScrollPos < lastScrollY) {
+      setVisibility(false);
+    } else {
+      setVisibility(true);
+    }
+    setLastScrollY(currentScrollPos);
+  }
+  // used to block scrolling on mobile
+  const [overflow, setOverflow] = useState('');
   // gets the current theme from localstorage
   useEffect(() => {
     keepTheme();
   })
+  // updates visibilty depending on scroll
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY, handleScroll])
+
   return (
     <Router>
     <div className={`static w-full flex flex-col h-screen ${overflow}`}>
-      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+      <div id='navbar' className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <Navbar setOuter={setOverflow}/>
         </div>
