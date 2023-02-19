@@ -1,20 +1,21 @@
-import { React, useEffect }from 'react';
+import { React, useEffect, useState }from 'react';
 import styles from './assets/styles'
 import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { Navbar, Home, Projects, Resume, About, Footer } from './components'
 import { keepTheme } from './assets/themes';
 
 function App() {
+  const [overflow, setOverflow] = useState('overflow-auto');
   // gets the current theme from localstorage
   useEffect(() => {
     keepTheme();
   })
   return (
     <Router>
-    <div className='static w-full flex flex-col overflow-auto h-screen'>
+    <div className={`static w-full flex flex-col h-screen ${overflow}`}>
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
-          <Navbar />
+          <Navbar setOuter={setOverflow}/>
         </div>
       </div>
       
