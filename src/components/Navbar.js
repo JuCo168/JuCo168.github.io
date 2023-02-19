@@ -10,7 +10,7 @@ function Navbar(props) {
   const [toggle, setToggle] = useState(false);
   const toggleNavbar = () => {
     setToggle((prev) => !prev)
-    toggle ? props.setOuter('overflow-auto') : props.setOuter('overflow-hidden') 
+    toggle ? props.setOuter('overflow-auto') : props.setOuter('overflow-hidden touch-none') 
   }
   return (
     <nav className='w-full flex py-2 justify-between items-center'>
@@ -35,19 +35,15 @@ function Navbar(props) {
 
       {/* Mobile navbar */}
       <div className='sm:hidden flex justify-end items-center'>
-        <div className='z-40' onClick={toggleNavbar}>
-            { toggle ? (
-              <AiOutlineClose className='w-[20px] h-[20px]' />
-            ) : (
-              <AiOutlineMenu className='w-[20px] h-[20px]' />
-            )}
+        <div onClick={toggleNavbar}>
+          <AiOutlineMenu className='w-[20px] h-[20px]' />
         </div>
       </div>
       <div className={`h-full w-full overflow-hidden overscroll-none inset-0 fixed sm:hidden backdrop-blur-sm bg-black/40 ${toggle ? 'z-20' : 'hidden'}`}
         onClick={toggleNavbar} />
       <div className={`${toggle ? 'translate-x-0' : 'translate-x-full'} 
           transition-transform top-0 right-0 w-auto h-full overflow-hidden fixed bg-tertiary
-          flex flex-col items-end py-12 px-6 z-30`}>
+          flex flex-col items-end p-6 z-30`}>
           <ul className='list-none flex flex-col justify-start items-end flex-1 space-y-6 mt-8'>
             {navLinks.map((nav) => (
               <li key={nav.id} className={styles.navLinks}
