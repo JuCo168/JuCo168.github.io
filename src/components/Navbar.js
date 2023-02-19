@@ -39,11 +39,11 @@ function Navbar(props) {
           <AiOutlineMenu className='w-[20px] h-[20px]' />
         </div>
       </div>
-      <div className={`h-full w-full overflow-hidden overscroll-none inset-0 fixed sm:hidden backdrop-blur-sm bg-black/40 ${toggle ? 'z-20' : 'hidden'}`}
+      <div className={`h-full w-full overflow-hidden overscroll-none inset-0 fixed sm:hidden backdrop-blur-sm bg-black/40 ${toggle ? 'z-40' : 'hidden'}`}
         onClick={toggleNavbar} />
       <div className={`${toggle ? 'translate-x-0' : 'translate-x-full'} 
           transition-transform top-0 right-0 w-auto h-full overflow-hidden fixed bg-tertiary
-          flex flex-col items-end p-6 z-30`}>
+          flex flex-col items-end p-6 z-50`}>
           <ul className='list-none flex flex-col justify-start items-end flex-1 space-y-6 mt-8'>
             {navLinks.map((nav) => (
               <li key={nav.id} className={styles.navLinks}

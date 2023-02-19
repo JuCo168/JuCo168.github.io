@@ -22,7 +22,7 @@ function App() {
     setLastScrollY(currentScrollPos);
   }
   // used to block scrolling on mobile
-  const [overflow, setOverflow] = useState('');
+  const [scrollable, setScrollable] = useState('');
   // gets the current theme from localstorage
   useEffect(() => {
     keepTheme();
@@ -35,14 +35,20 @@ function App() {
 
   return (
     <Router>
-    <div className={`static w-full flex flex-col h-screen ${overflow}`}>
-      <div id='navbar' className={`${styles.paddingX} ${styles.flexCenter}`}>
+    <div className={`static w-full flex flex-col h-screen ${scrollable}`}>
+    <div id='navbar' className={`${styles.paddingX} ${styles.flexCenter}
+        w-full absolute top-0 z-30 transition-transform ${visible ? '-translate-y-full' : 'translate-y-0'} bg-black`}>
         <div className={`${styles.boxWidth}`}>
-          <Navbar setOuter={setOverflow}/>
+          <Navbar setOuter={setScrollable}/>
+        </div>
+      </div>
+      <div id='navbar' className={`${styles.paddingX} ${styles.flexCenter} bg-tertiary`}>
+        <div className={`${styles.boxWidth}`}>
+          <Navbar setOuter={setScrollable}/>
         </div>
       </div>
       
-      <div className={`${styles.flexStart} mb-auto`}>
+      <div className={`${styles.flexStart} relative`}>
         <div className={`${styles.boxWidth}`}>
           <Routes>
             <Route path='/' element={<Home />} />
@@ -54,7 +60,7 @@ function App() {
         </div>
       </div>
 
-      <div className={`${styles.paddingX} ${styles.flexStart}`}>
+      <div className={`${styles.paddingX} ${styles.flexStart} mt-auto`}>
         <div className={`${styles.boxWidth}`}>
           <Footer />
         </div>
