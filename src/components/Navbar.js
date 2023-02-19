@@ -4,7 +4,7 @@ import { navLinks } from '../assets/constants';
 import { Link } from 'react-router-dom';
 import styles from '../assets/styles';
 import Toggle from './Toggle';
-import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { AiOutlineMenu } from 'react-icons/ai';
 
 function Navbar(props) {
   const [toggle, setToggle] = useState(false);

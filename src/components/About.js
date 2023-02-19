@@ -16,7 +16,7 @@ function About() {
         </div>
       </div>
       {/* Skills */}
-      <div className="w-full md:mt-12 grid grid-cols-4 md:grid-cols-6 gap-4 md:gap-8">
+      <div className="w-full md:mt-12 grid grid-cols-4 gap-4 md:gap-8">
         { skills.map((skill) => (
           <div className='transition ease-in-out delay-100 duration-150
             flex ring-4 rounded-md justify-center items-center hover:scale-110'>
