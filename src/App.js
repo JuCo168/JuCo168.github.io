@@ -14,8 +14,11 @@ function App() {
   const handleScroll = debounce(() => {
     const currentScrollPos = window.scrollY;
     const navbarHeight = document.getElementById('navbar').offsetHeight;
-    currentScrollPos < navbarHeight || (currentScrollPos < lastScrollY && lastScrollY - currentScrollPos > 50)? 
-      setVisibility(true) : setVisibility(false);
+
+    currentScrollPos < navbarHeight || 
+      (currentScrollPos < lastScrollY && lastScrollY - currentScrollPos > 50)
+      ? setVisibility(true) : setVisibility(false);
+      
     setLastScrollY(currentScrollPos);
   }, 100);
   // used to block scrolling on mobile
