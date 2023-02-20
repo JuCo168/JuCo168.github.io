@@ -12,7 +12,7 @@ function About() {
         </div>
         {/* Picture */}
         <div className="flex justify-center mb-4 md:mb-0">
-          <img src={profile} alt='Julius Co' className="h-3/5 w-3/6 md:h-1/2 md:w-1/2 ring-4 rounded-md m-1"/>
+          <img src={profile} alt='Julius Co' className="h-3/5 w-3/5 md:h-1/2 md:w-1/2 ring-4 rounded-md m-1"/>
         </div>
       </div>
       {/* Skills */}
