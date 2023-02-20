@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { BsDownload } from 'react-icons/bs'
 import { Document, Page, pdfjs } from 'react-pdf';
 import { resume } from '../assets';
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 const resumeLink = 'https://raw.githubusercontent.com/JuCo168/JuCo168.github.io/main/src/assets/Resume%202.2.pdf'
@@ -15,13 +15,11 @@ export default function Resume() {
   }, [width]);
 
   return (
-    <div className="flex flex-col justify-center items-center mx-auto overflow-y-scroll">
-      <button className='bg-tertiary mb-6 py-2 px-6 rounded'>
+    <div className='flex flex-col justify-center items-center mx-auto overflow-y-scroll'>
+      <button className='bg-tertiary mb-6 py-3 px-8 rounded hover:saturate-150 hover:ring-1 ring-inset delay-150'>
         <a href={resume} className='flex items-center' target='_blank' rel='noreferrer'>
-          <BsDownload/>
-          <p className='ml-2'>
-          Download
-          </p>
+          <BsDownload className='stroke-1'/>
+          <p className='ml-2 text-lg'>Download</p>
         </a>
       </button>
 

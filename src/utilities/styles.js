@@ -14,11 +14,11 @@ const styles = {
   marginX: 'sm:mx-16 mx-6',
   marginY: 'sm:my-16 my-6',
 
-  skill: 'w-[36px] h-[36px] md:w-[64px] md:h-[64px] my-1 md:my-8',
+  skill: 'w-9 h-9 md:w-16 md:h-16 my-1 md:my-8',
 
-  socials: 'w-[21px] h-[21px] object-contain cursor-pointer',
+  socials: 'w-5 h-5 object-contain cursor-pointer',
 
-  navLinks: 'sm:hidden font-poppins font-semibold cursor-pointer text-[24px]',
+  navLinks: 'sm:hidden font-poppins font-semibold cursor-pointer text-2xl',
 };
 
 export default styles;

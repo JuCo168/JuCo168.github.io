@@ -1,8 +1,8 @@
 import doggoFull from './doggo-full.png'
 import doggoSmall from './doggo-small.png'
-import arrowUp from "./arrow-up.svg"
-import resume from "./Resume 2.2.pdf"
+import resume from './Resume 2.2.pdf'
 import profile from './profile.png'
+import profileSquare from './profile-square.png'
 import bundestag from './slides/bundestag.jpg'
 import gundam from './slides/gundam.jpg'
 import pc from './slides/pc.jpg'
@@ -11,9 +11,9 @@ import peiwenie from './slides/peiwenie.jpg'
 export {
     doggoFull,
     doggoSmall,
-    arrowUp,
     resume,
-    profile
+    profile,
+    profileSquare,
 }
 
 export const slides = [

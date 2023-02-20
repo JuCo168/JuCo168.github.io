@@ -25,7 +25,7 @@ function Navbar(props) {
       <ul className='list-none sm:flex hidden justify-end items-center flex-1 space-x-10'>
         {navLinks.map((nav) => (
           <li key={nav.id} className='font-poppins font-normal cursor-pointer text-base' >
-            <Link to={`/${nav.id}`}>{nav.title}</Link>
+            <Link to={`/${nav.id}`} className='hover:border-b-2'>{nav.title}</Link>
           </li>
         ))}
         <li className='cursor-pointer text-base'>
