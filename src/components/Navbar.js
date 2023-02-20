@@ -28,7 +28,7 @@ function Navbar(props) {
             <Link to={`/${nav.id}`}>{nav.title}</Link>
           </li>
         ))}
-        <li className={`cursor-pointer text-base}`}>
+        <li className='cursor-pointer text-base'>
           <Toggle />
         </li>
       </ul>

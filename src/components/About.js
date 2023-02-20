@@ -4,7 +4,7 @@ import { profile } from "../assets";
 
 function About() {
   return (
-    <div className={`flex flex-col justify-center items-center px-4 md:px-0`}>
+    <div className='flex flex-col justify-center items-center px-4 md:px-0'>
       <div className="flex flex-col-reverse md:flex-row justify-center items-start w-auto h-auto">
         {/* About me */}
         <div className="flex justify-start mb-12">
