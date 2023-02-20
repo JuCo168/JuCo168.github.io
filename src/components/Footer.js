@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../assets/styles";
+import styles from "../utilities/styles";
 import { BsLinkedin, BsGithub, BsInstagram } from "react-icons/bs";
 import { FaSteam } from "react-icons/fa";
 
@@ -7,7 +7,7 @@ function Footer() {
   return (
     <footer className={`${styles.flexCenter} py-4 flex-col`}>
       <div className="w-full flex justify-between items-center md:flex-row flex-col pt-6">
-        <p className="font-poppins font-medium text-center text-[18px] leading-[27px]">
+        <p className="font-poppins font-medium text-center text-lg">
           Developed by Julius Co
         </p>
 

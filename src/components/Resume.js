@@ -12,7 +12,7 @@ export default function Resume() {
 
   useEffect(() => {
     setWidth(window.innerWidth);
-  }, []);
+  }, [width]);
 
   return (
     <div className="flex flex-col justify-center items-center mx-auto overflow-y-scroll">

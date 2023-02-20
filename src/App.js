@@ -1,8 +1,9 @@
 import { React, useEffect, useState }from 'react';
-import styles from './assets/styles'
+import { debounce } from './utilities/debounce';
+import styles from './utilities/styles'
 import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { Navbar, Home, Projects, Resume, About, Footer } from './components'
-import { keepTheme } from './assets/themes';
+import { keepTheme } from './utilities/themes';
 
 function App() {
   // used to display navbar
@@ -10,17 +11,13 @@ function App() {
   // used to save last scroll position
   const [lastScrollY, setLastScrollY] = useState(0);
   // handles behavior on scroll
-  const handleScroll = () => {
+  const handleScroll = debounce(() => {
     const currentScrollPos = window.scrollY;
     const navbarHeight = document.getElementById('navbar').offsetHeight;
-
-    if (currentScrollPos > navbarHeight && currentScrollPos < lastScrollY) {
-      setVisibility(false);
-    } else {
-      setVisibility(true);
-    }
+    currentScrollPos < navbarHeight || (currentScrollPos < lastScrollY && lastScrollY - currentScrollPos > 50)? 
+      setVisibility(true) : setVisibility(false);
     setLastScrollY(currentScrollPos);
-  }
+  }, 100);
   // used to block scrolling on mobile
   const [scrollable, setScrollable] = useState('');
   // gets the current theme from localstorage
@@ -36,19 +33,15 @@ function App() {
   return (
     <Router>
     <div className={`static w-full flex flex-col h-screen ${scrollable}`}>
-    <div id='navbar' className={`${styles.paddingX} ${styles.flexCenter}
-        w-full absolute top-0 z-30 transition-transform ${visible ? '-translate-y-full' : 'translate-y-0'} bg-black`}>
-        <div className={`${styles.boxWidth}`}>
-          <Navbar setOuter={setScrollable}/>
-        </div>
-      </div>
-      <div id='navbar' className={`${styles.paddingX} ${styles.flexCenter} bg-tertiary`}>
+      <div id='navbar' className={`${styles.paddingX} ${styles.flexCenter}
+        w-full h-auto fixed top-0 z-30 transition-transform 
+        ${visible ? 'translate-y-0' : '-translate-y-full'} bg-tertiary`}>
         <div className={`${styles.boxWidth}`}>
           <Navbar setOuter={setScrollable}/>
         </div>
       </div>
       
-      <div className={`${styles.flexStart} relative`}>
+      <div className={`${styles.flexStart} relative mt-20 sm:mt-24`}>
         <div className={`${styles.boxWidth}`}>
           <Routes>
             <Route path='/' element={<Home />} />

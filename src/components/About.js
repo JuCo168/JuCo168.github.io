@@ -8,11 +8,11 @@ function About() {
       <div className="flex flex-col-reverse md:flex-row justify-center items-start w-auto h-auto">
         {/* About me */}
         <div className="flex justify-start mb-12">
-          <p className="text-[18px] leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p className="text-xl leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
         {/* Picture */}
         <div className="flex justify-center mb-4 md:mb-0">
-          <img src={profile} alt='Julius Co' className="h-[60%] w-[60%] md:h-[50%] md:w-[50%] ring-4 rounded-md"/>
+          <img src={profile} alt='Julius Co' className="h-3/5 w-3/6 md:h-1/2 md:w-1/2 ring-4 rounded-md m-1"/>
         </div>
       </div>
       {/* Skills */}

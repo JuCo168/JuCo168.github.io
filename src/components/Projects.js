@@ -4,9 +4,7 @@ export default function Projects() {
   return (
      <div className="flex flex-col justify-center px-2 md:px-0">
         {/* Projects title */}
-        <div className="flex justify-center border-b-2 w-full">
-          <p className="text-[48px] font-semibold pb-1">Projects</p>
-        </div>
+        <p className="text-5xl text-center font-semibold pb-2 border-b-2 w-full -mt-2">Projects</p>
         {/* Projects */}
         <div className="mt-8 mx-2 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
           { projects.map((project) => (

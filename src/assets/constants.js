@@ -1,4 +1,4 @@
-import styles from "./styles";
+import styles from "../utilities/styles";
 import {
   SiPython,
   SiJavascript,
