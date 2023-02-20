@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { doggoSmall } from '../assets';
 import { navLinks } from '../assets/constants';
 import { Link } from 'react-router-dom';
-import styles from '../assets/styles';
+import styles from '../utilities/styles';
 import Toggle from './Toggle';
 import { AiOutlineMenu } from 'react-icons/ai';
 
@@ -10,25 +10,25 @@ function Navbar(props) {
   const [toggle, setToggle] = useState(false);
   const toggleNavbar = () => {
     setToggle((prev) => !prev)
-    toggle ? props.setOuter('overflow-auto') : props.setOuter('overflow-hidden touch-none') 
+    toggle ? props.setOuter('') : props.setOuter('touch-none') 
   }
   return (
     <nav className='w-full flex py-2 justify-between items-center'>
       {/* Desktop navbar */}
-      <div className={`${styles.flexCenter} w-[56px] h-[56px] sm:w-[60px] sm:h-[60px] rounded-full bg-secondary p-[2px] cursor-pointer`} >
+      <div className={`${styles.flexCenter} w-14 h-14 rounded-full bg-secondary p-0.5 cursor-pointer`} >
         <Link to='/'>
           <img src={doggoSmall}
             alt='profile'
-            className='sm:w-[100%] sm:h-[100%] rounded-full' />
+            className='rounded-full' />
         </Link>
       </div>
       <ul className='list-none sm:flex hidden justify-end items-center flex-1 space-x-10'>
         {navLinks.map((nav) => (
-          <li key={nav.id} className='font-poppins font-normal cursor-pointer text-[16px]' >
+          <li key={nav.id} className='font-poppins font-normal cursor-pointer text-base' >
             <Link to={`/${nav.id}`}>{nav.title}</Link>
           </li>
         ))}
-        <li className={`cursor-pointer text-[16px]}`}>
+        <li className='cursor-pointer text-base'>
           <Toggle />
         </li>
       </ul>
@@ -36,14 +36,14 @@ function Navbar(props) {
       {/* Mobile navbar */}
       <div className='sm:hidden flex justify-end items-center'>
         <div onClick={toggleNavbar}>
-          <AiOutlineMenu className='w-[20px] h-[20px]' />
+          <AiOutlineMenu className='w-5 h-5' />
         </div>
       </div>
-      <div className={`h-full w-full overflow-hidden overscroll-none inset-0 fixed sm:hidden backdrop-blur-sm bg-black/40 ${toggle ? 'z-20' : 'hidden'}`}
+      <div className={`h-screen w-full inset-0 fixed sm:hidden backdrop-blur-sm bg-black/40 ${toggle ? 'z-40' : 'hidden'}`}
         onClick={toggleNavbar} />
       <div className={`${toggle ? 'translate-x-0' : 'translate-x-full'} 
-          transition-transform top-0 right-0 w-auto h-full overflow-hidden fixed bg-tertiary
-          flex flex-col items-end p-6 z-30`}>
+          transition-transform top-0 right-0 w-auto h-screen fixed bg-tertiary
+          flex flex-col items-end p-6 z-50`}>
           <ul className='list-none flex flex-col justify-start items-end flex-1 space-y-6 mt-8'>
             {navLinks.map((nav) => (
               <li key={nav.id} className={styles.navLinks}

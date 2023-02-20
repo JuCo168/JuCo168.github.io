@@ -8,7 +8,7 @@ import { slides } from "../assets";
 
 function Home() {
   return (
-    <section id="home" className={`flex justify-center flex-col py-2 sm:py-12`}>
+    <div className='flex justify-center flex-col pb-2 sm:pb-12'>
       {/* image carousel */}
       <Swiper slidesPerView={1}
         spaceBetween={0}
@@ -17,14 +17,14 @@ function Home() {
         pagination={{ clickable: true, dynamicBullets: true, }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="w-full h-full mx-auto ring-4 sm:rounded-md">
+        className="w-full h-full mx-auto m-1 ring-4 sm:rounded-md">
         { slides.map((slide, index) => (
-          <SwiperSlide className={`block object-cover w-full h-full ${slide.pos}-[${slide.px}px]`}>
+          <SwiperSlide className={`block object-cover w-full h-full`}>
             <img src={slide.image} alt={slide.desc} key={index} />
           </SwiperSlide>
         ))}
       </Swiper>
-    </section>
+    </div>
   );
   
 }
