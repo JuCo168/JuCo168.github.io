@@ -1,10 +1,11 @@
-import { useState } from 'react';
+ import { useState } from 'react';
 import { doggoSmall } from '../assets';
 import { navLinks } from '../assets/constants';
 import { Link } from 'react-router-dom';
 import styles from '../utilities/styles';
 import Toggle from './Toggle';
 import { AiOutlineMenu } from 'react-icons/ai';
+import { BsFillMoonStarsFill, BsFillSunFill } from 'react-icons/bs'
 
 function Navbar(props) {
   const [toggle, setToggle] = useState(false);
@@ -15,7 +16,7 @@ function Navbar(props) {
   return (
     <nav className='w-full flex py-2 justify-between items-center'>
       {/* Desktop navbar */}
-      <div className={`${styles.flexCenter} w-14 h-14 rounded-full bg-secondary p-0.5 cursor-pointer hover:brightness-125`} >
+      <div className={`${styles.flexCenter} w-14 h-14 rounded-full bg-dark-text p-0.5 cursor-pointer hover:brightness-125`} >
         <Link to='/'>
           <img src={doggoSmall}
             alt='profile'
@@ -24,7 +25,7 @@ function Navbar(props) {
       </div>
       <ul className='list-none sm:flex hidden justify-end items-center flex-1 space-x-10'>
         {navLinks.map((nav) => (
-          <li key={nav.id} className='font-poppins font-normal cursor-pointer text-base' >
+          <li key={nav.id} className='font-poppins font-normal cursor-pointer text-base text-dark-text' >
             <Link to={`/${nav.id}`} className='hover:brightness-125'>{nav.title}</Link>
           </li>
         ))}
@@ -52,7 +53,6 @@ function Navbar(props) {
               </li>
             ))}
             <li>
-              <Toggle />
             </li>
           </ul>
         </div>

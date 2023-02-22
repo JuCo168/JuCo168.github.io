@@ -27,7 +27,7 @@ function Home() {
         ))}
       </Swiper>
       {/* Projects preview */}
-      <div className='flex flex-col justify-center px-2 md:px-0 pt-8 sm:pt-20'>
+      <section className='flex flex-col justify-center px-2 md:px-0 pt-8 sm:pt-20'>
         {/* Projects title */}
         <p className='text-5xl text-center font-semibold pb-2 border-b-2 w-full -mt-2'>Projects</p>
         {/* Projects */}
@@ -55,7 +55,7 @@ function Home() {
             </a>
           ))}
         </div>
-     </div>
+      </section>
     </div>
   );
   

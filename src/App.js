@@ -3,7 +3,6 @@ import { debounce } from './utilities/debounce';
 import styles from './utilities/styles'
 import { HashRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { Navbar, Home, Projects, Resume, About, Footer } from './components'
-import { keepTheme } from './utilities/themes';
 
 function App() {
   // used to display navbar
@@ -23,10 +22,6 @@ function App() {
   }, 100);
   // used to block scrolling on mobile
   const [scrollable, setScrollable] = useState('');
-  // gets the current theme from localstorage
-  useEffect(() => {
-    keepTheme();
-  })
   // updates visibilty depending on scroll
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -35,16 +30,16 @@ function App() {
 
   return (
     <Router>
-    <div className={`static w-full flex flex-col h-screen ${scrollable}`}>
+    <div className={`static w-full flex flex-col h-screen ${scrollable} bg-white dark:bg-dark-primary text-black dark:text-dark-text`}>
       <div id='navbar' className={`${styles.paddingX} ${styles.flexCenter}
         w-full h-auto fixed top-0 z-30 transition-transform 
-        ${visible ? 'translate-y-0' : '-translate-y-full'} bg-tertiary`}>
+        ${visible ? 'translate-y-0' : '-translate-y-full'} bg-secondary/80`}>
         <div className={`${styles.boxWidth}`}>
           <Navbar setOuter={setScrollable}/>
         </div>
       </div>
       
-      <div className={`${styles.flexStart} relative mt-20 sm:mt-24`}>
+      <main className={`${styles.flexStart} relative mt-20 sm:mt-24 bg-inherit text-inherit`}>
         <div className={`${styles.boxWidth}`}>
           <Routes>
             <Route path='/' element={<Home />} />
@@ -54,9 +49,9 @@ function App() {
             <Route path='*' element={<Navigate to='/'/>} />
           </Routes>
         </div>
-      </div>
+      </main>
 
-      <div className={`${styles.paddingX} ${styles.flexStart} mt-auto`}>
+      <div className={`${styles.paddingX} ${styles.flexStart} mt-auto bg-inherit text-inherit`}>
         <div className={`${styles.boxWidth}`}>
           <Footer />
         </div>
