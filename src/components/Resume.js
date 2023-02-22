@@ -16,14 +16,14 @@ export default function Resume() {
 
   return (
     <div className='flex flex-col justify-center items-center mx-auto overflow-y-scroll'>
-      <button className='bg-tertiary mb-6 py-3 px-8 rounded hover:saturate-150 hover:ring-1 ring-inset delay-150'>
-        <a href={resume} className='flex items-center' target='_blank' rel='noreferrer'>
+      <button className='bg-secondary/80 mb-6 py-3 px-8 rounded hover:saturate-150 hover:ring-1 ring-inset delay-150'>
+        <a href={resume} className='flex items-center text-dark-text' target='_blank' rel='noreferrer'>
           <BsDownload className='stroke-1'/>
           <p className='ml-2 text-lg'>Download</p>
         </a>
       </button>
 
-      <Document file={resumeLink} >
+      <Document file={resumeLink} className='border-2 border-color-secondary mb-2'>
         <Page pageNumber={1} renderTextLayer={false} renderAnnotationLayer={false} scale={width > 768 ? 1.4 : 0.6}/>
       </Document>
     </div>

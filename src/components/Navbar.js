@@ -43,7 +43,7 @@ function Navbar(props) {
       <div className={`h-screen w-full inset-0 fixed sm:hidden backdrop-blur-sm bg-black/40 ${toggle ? 'z-40' : 'hidden'}`}
         onClick={toggleNavbar} />
       <div className={`${toggle ? 'translate-x-0' : 'translate-x-full'} 
-          transition-transform top-0 right-0 w-auto h-screen fixed bg-tertiary
+          transition-transform top-0 right-0 w-auto h-screen fixed bg-secondary
           flex flex-col items-end p-6 z-50`}>
           <ul className='list-none flex flex-col justify-start items-end flex-1 space-y-6 mt-8'>
             {navLinks.map((nav) => (
@@ -53,6 +53,7 @@ function Navbar(props) {
               </li>
             ))}
             <li>
+              <Toggle />
             </li>
           </ul>
         </div>
