@@ -18,7 +18,12 @@ export default function Projects() {
               <p className='text-center p-2'>
                 {project.description}
               </p>
-              <div className='h-auto w-full overflow-hidden rounded-b-md'>
+              <div className='flex flex-row justify-center space-x-4 pb-2 text-3xl sm:text-5xl'>
+                { project.icons.map((icon) => (
+                  icon
+                ))}
+              </div>
+              <div className={`h-auto w-full overflow-hidden rounded-b-md ${project.image ? '' : 'hidden'}`}>
                 <img src={project.image}
                   alt={project.title}
                   className='w-full object-cover'/>

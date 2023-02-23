@@ -8,6 +8,8 @@ import {
   SiC,
   SiTailwindcss,
   SiGithub,
+  SiAngular,
+  SiMysql
 } from 'react-icons/si';
 import vigenere_decipher from './projects/vigenere_decipher.png';
 import portfolio from './projects/portfolio.png';
@@ -37,6 +39,7 @@ export const projects = [
     description:
       'My personal website built using React, styled with Tailwind CSS, and hosted on GitHub Pages! Dark and light themes were inspired by GMK Hammerhead.',
     image: portfolio,
+    icons: [<SiReact/>, <SiTailwindcss/>],
     link: 'https://github.com/JuCo168/JuCo168.github.io',
   },
   {
@@ -44,14 +47,15 @@ export const projects = [
     description:
       'Basic python script to crack a Vigenere cipher using Kasiski elimination.',
     image: vigenere_decipher,
+    icons: [<SiPython/>],
     link: 'https://github.com/JuCo168/Vigenere-decipher',
   },
   {
-    title: 'Vigenere Decipher 2',
+    title: 'Apartment Checklist',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?',
-    image: vigenere_decipher,
-    link: 'https://github.com/JuCo168/Vigenere-decipher',
+      'Moving-in checklist that keeps track of items, furniture, and responsibilities. Built with Angular and MySQL.',
+    icons: [<SiAngular/>, <SiMysql/>],
+    link: 'https://github.com/JuCo168/apartment-checklist',
   },
 ];
 
