@@ -47,6 +47,11 @@ function Home() {
               <p className='text-center p-2'>
                 {project.description}
               </p>
+              <div className='flex flex-row justify-center space-x-4 pb-2 text-3xl sm:text-5xl'>
+                { project.icons.map((icon) => (
+                  icon
+                ))}
+              </div>
               <div className='h-auto w-full overflow-hidden rounded-b-md'>
                 <img src={project.image}
                   alt={project.title}
