@@ -10,6 +10,7 @@ import {
   SiGithub,
 } from 'react-icons/si';
 import vigenere_decipher from './projects/vigenere_decipher.png';
+import portfolio from './projects/portfolio.png';
 
 export const navLinks = [
   {
@@ -35,7 +36,7 @@ export const projects = [
     title: 'Personal Portfolio',
     description:
       'My personal website built using React, styled with Tailwind CSS, and hosted on GitHub Pages! Dark and light themes were inspired by GMK Hammerhead.',
-    image: '',
+    image: portfolio,
     link: 'https://github.com/JuCo168/JuCo168.github.io',
   },
   {
