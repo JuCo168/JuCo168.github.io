@@ -32,9 +32,16 @@ export const navLinks = [
 
 export const projects = [
   {
+    title: 'Personal Portfolio',
+    description:
+      'My personal website built using React, styled with Tailwind CSS, and hosted on GitHub Pages! Dark and light themes were inspired by GMK Hammerhead.',
+    image: '',
+    link: 'https://github.com/JuCo168/JuCo168.github.io',
+  },
+  {
     title: 'Vigenere Decipher',
     description:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius? Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?',
+      'Basic python script to crack a Vigenere cipher using Kasiski elimination.',
     image: vigenere_decipher,
     link: 'https://github.com/JuCo168/Vigenere-decipher',
   },

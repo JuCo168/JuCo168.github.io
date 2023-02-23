@@ -23,7 +23,7 @@ export default function Resume() {
         </a>
       </button>
 
-      <Document file={resumeLink} className='border-2 border-color-secondary mb-2'>
+      <Document file={resumeLink} className='border-2 border-secondary/50 dark:border-dark-primary mb-2'>
         <Page pageNumber={1} renderTextLayer={false} renderAnnotationLayer={false} scale={width > 768 ? 1.4 : 0.6}/>
       </Document>
     </div>

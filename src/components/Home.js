@@ -19,7 +19,7 @@ function Home() {
         pagination={{ clickable: true, dynamicBullets: true, }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className='w-full h-full mx-auto m-1 ring-4 sm:rounded-md'>
+        className='w-full h-full mx-auto m-1 sm:rounded-md'>
         { slides.map((slide, index) => (
           <SwiperSlide className={`block object-cover w-full h-full`}>
             <img src={slide.image} alt={slide.desc} key={index} />
@@ -31,9 +31,9 @@ function Home() {
         {/* Projects title */}
         <p className='text-5xl text-center font-semibold pb-2 border-b-2 w-full -mt-2'>Projects</p>
         {/* Projects */}
-        <div className='mt-8 mx-2 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8'>
+        <div className='mt-8 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8'>
           { projects.slice(0, 2).map((project, index) => (
-            <a className='transition ease-in-out delay-100 duration-150 ring-4
+            <a className='transition ease-in-out delay-100 duration-150 border-4 border-secondary/80
               rounded-md justify-center items-center cursor-pointer flex flex-col overflow-hidden
               h-80 relative' 
               href={project.link} target='_blank' rel='noreferrer'>

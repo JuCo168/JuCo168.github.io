@@ -30,7 +30,8 @@ function App() {
 
   return (
     <Router>
-    <div className={`static w-full flex flex-col h-screen ${scrollable} bg-white dark:bg-dark-primary text-black dark:text-dark-text`}>
+    <div className={`static w-full flex flex-col h-screen ${scrollable} 
+      bg-white dark:bg-dark-primary text-black dark:text-dark-text`}>
       <div id='navbar' className={`${styles.paddingX} ${styles.flexCenter}
         w-full h-auto fixed top-0 z-30 transition-transform 
         ${visible ? 'translate-y-0' : '-translate-y-full'} bg-secondary/80`}>

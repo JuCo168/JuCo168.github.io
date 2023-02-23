@@ -5,21 +5,31 @@ import { profile, profileSquare } from '../assets';
 function About() {
   return (
     <div className='flex flex-col justify-center items-center px-4 md:px-0'>
-      <div className='flex flex-col-reverse md:flex-row justify-center items-start w-auto h-auto'>
-        {/* About me */}
-        <div className='flex justify-start mb-12'>
-          <p className='text-xl leading-relaxed'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      {/* About me */}
+      <div className='flex flex-col-reverse md:flex-row justify-center items-center w-auto h-auto mb-8 md:mb-14'>
+        {/* About text */}
+        <div className='text-l sm:text-xl leading-relaxed w-full h-full'>
+          <h1 className='text-3xl sm:text-5xl leading-relaxed'>Hello! I'm Julius Co</h1>
+          <p>I am a new grad from the University of California, San Diego majoring in Computer Science & Engineering.</p>
+          <p>Currently I am working freelance as a Java backend engineer at Senvo.</p>
+          <p>I'm interested in full-stack, backend, networking, and security.</p>
+          <p>Other than coding I like:</p>
+          <ul className='list-disc list-inside'>
+            <li>Video games (lots of Destiny 2)</li>
+            <li>Gundam model kits (Gunpla)</li>
+            <li>PC, keyboards, and setups</li>
+          </ul>
         </div>
         {/* Picture */}
-        <div className='flex justify-center mb-4 md:mb-0'>
-          <img src={profileSquare} alt='Julius Co' className='h-3/5 w-3/5 md:h-2/3 md:w-2/3 ring-4 rounded-md m-1'/>
+        <div className='flex justify-center h-3/5 w-3/5 md:h-2/3 md:w-2/3'>
+          <img src={profileSquare} alt='Julius Co' className='rounded-md m-1'/>
         </div>
       </div>
       {/* Skills */}
-      <div className='w-full md:mt-14 grid grid-cols-4 gap-4 md:gap-8'>
+      <div className='w-full grid grid-cols-4 gap-4 md:gap-8'>
         { skills.map((skill) => (
           <div className='transition ease-in-out delay-100 duration-150
-            flex ring-4 rounded-md justify-center items-center hover:scale-110'>
+            flex border-4 border-secondary rounded-md justify-center items-center hover:scale-110'>
             {skill.icon}
           </div>
         ))}

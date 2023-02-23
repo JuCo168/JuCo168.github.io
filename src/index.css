@@ -6,11 +6,11 @@
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: var(--font-color) !important;
+  color: #9aefea !important;
 }
 
 .swiper-pagination-bullet-active {
-  background: var(--font-color) !important
+  background: #9aefea !important
 }
 
 * {
