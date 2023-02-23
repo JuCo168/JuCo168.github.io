@@ -4,12 +4,13 @@ import { profile, profileSquare } from '../assets';
 
 function About() {
   return (
-    <div className='flex flex-col justify-center items-center px-4 md:px-0'>
+    <div className='flex flex-col justify-center items-center mt-4 sm:mt-8 px-6 md:px-0'>
       {/* About me */}
-      <div className='flex flex-col-reverse md:flex-row justify-center items-center w-auto h-auto mb-8 md:mb-14'>
+      <div className='flex flex-col-reverse md:flex-row justify-center items-center
+        sm:items-start w-auto h-auto mb-8 md:mb-14'>
         {/* About text */}
-        <div className='text-l sm:text-xl leading-normal w-full h-full'>
-          <h1 className='text-3xl sm:text-5xl font-semibold pb-6'>Hello! I'm Julius Co</h1>
+        <div className='text-l sm:text-xl leading-normal w-full h-full mt-4 sm:mt-0 mr-0 sm:mr-8'>
+          <h1 className='text-3xl sm:text-5xl font-semibold pb-2 sm:pb-6 text-center sm:text-left'>Hello! I'm Julius Co</h1>
           <p className='mb-4'>I am a new grad from the University of California, San Diego majoring in Computer Science & Engineering.</p>
           <p className='mb-4'>Currently I am working freelance as a Java backend engineer at Senvo.</p>
           <p className='mb-4'>I'm interested in full-stack, backend, networking, and security.</p>
@@ -22,7 +23,7 @@ function About() {
         </div>
         {/* Picture */}
         <div className='flex justify-center h-3/5 w-3/5 md:h-2/3 md:w-2/3'>
-          <img src={profileSquare} alt='Julius Co' className='rounded-md m-1'/>
+          <img src={profileSquare} alt='Julius Co' className='rounded-md'/>
         </div>
       </div>
       {/* Skills */}
