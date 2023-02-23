@@ -37,25 +37,25 @@ function Home() {
               rounded-md justify-center items-center cursor-pointer flex flex-col overflow-hidden
               h-80 relative' 
               href={project.link} target='_blank' rel='noreferrer'>
-                <Link to='/projects' className={`flex w-full h-full bg-black/40 absolute justify-center items-center hover:brightness-125
+                <Link to='/projects' className={`flex w-full h-full bg-black/40 absolute justify-center items-center hover:brightness-125 z-30
                   ${index == 1 ? '' : 'hidden'}`}>
                     <p className='text-xl shadow-2xl text-white font-semibold'>See more</p>
                 </Link>
-              <p className='font-semibold pt-2'>
+              <p className='font-semibold pt-2 text-xl'>
                 {project.title}
               </p>
               <p className='text-center p-2'>
                 {project.description}
               </p>
-              <div className='flex flex-row justify-center space-x-4 pb-2 text-3xl sm:text-5xl'>
-                { project.icons.map((icon) => (
-                  icon
-                ))}
-              </div>
               <div className='h-auto w-full overflow-hidden rounded-b-md'>
                 <img src={project.image}
                   alt={project.title}
                   className='w-full'/>
+              </div>
+              <div className='absolute top-0 right-0 flex flex-row justify-center space-x-4 pr-1 pt-1 text-3xl sm:text-4xl'>
+                { project.icons.map((icon) => (
+                  icon
+                ))}
               </div>
             </a>
           ))}

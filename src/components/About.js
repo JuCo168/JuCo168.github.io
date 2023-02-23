@@ -8,11 +8,11 @@ function About() {
       {/* About me */}
       <div className='flex flex-col-reverse md:flex-row justify-center items-center w-auto h-auto mb-8 md:mb-14'>
         {/* About text */}
-        <div className='text-l sm:text-xl leading-relaxed w-full h-full'>
-          <h1 className='text-3xl sm:text-5xl leading-relaxed'>Hello! I'm Julius Co</h1>
-          <p>I am a new grad from the University of California, San Diego majoring in Computer Science & Engineering.</p>
-          <p>Currently I am working freelance as a Java backend engineer at Senvo.</p>
-          <p>I'm interested in full-stack, backend, networking, and security.</p>
+        <div className='text-l sm:text-xl leading-normal w-full h-full'>
+          <h1 className='text-3xl sm:text-5xl font-semibold pb-6'>Hello! I'm Julius Co</h1>
+          <p className='mb-4'>I am a new grad from the University of California, San Diego majoring in Computer Science & Engineering.</p>
+          <p className='mb-4'>Currently I am working freelance as a Java backend engineer at Senvo.</p>
+          <p className='mb-4'>I'm interested in full-stack, backend, networking, and security.</p>
           <p>Other than coding I like:</p>
           <ul className='list-disc list-inside'>
             <li>Video games (lots of Destiny 2)</li>

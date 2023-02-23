@@ -37,7 +37,7 @@ export const projects = [
   {
     title: 'Personal Portfolio',
     description:
-      'My personal website built using React, styled with Tailwind CSS, and hosted on GitHub Pages! Dark and light themes were inspired by GMK Hammerhead.',
+      'My personal website built using React, styled with Tailwind CSS, and hosted on GitHub Pages! Features multi-page layout and mobile-responsive design.',
     image: portfolio,
     icons: [<SiReact/>, <SiTailwindcss/>],
     link: 'https://github.com/JuCo168/JuCo168.github.io',
