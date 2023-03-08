@@ -24,7 +24,7 @@ function Footer() {
           rel='noreferrer'>
           <BsInstagram className={styles.socials} />
         </a>
-        <a href='https://steamcommunity.com/id/juco_/'
+        <a href='https://steamcommunity.com/id/juco168/'
           target='_blank'
           rel='noreferrer'>
           <FaSteam className={styles.socials} />
