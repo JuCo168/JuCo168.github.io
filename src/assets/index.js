@@ -1,6 +1,6 @@
 import doggoFull from './doggo-full.png'
 import doggoSmall from './doggo-small.png'
-import resume from './Resume 2.2.pdf'
+import resume from './Resume_3_0.pdf'
 import profile from './profile.png'
 import profileSquare from './profile-square.png'
 import bundestag from './slides/bundestag.jpg'

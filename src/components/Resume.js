@@ -5,8 +5,6 @@ import { resume } from '../assets';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
-const resumeLink = 'https://raw.githubusercontent.com/JuCo168/JuCo168.github.io/main/src/assets/Resume%202.2.pdf'
-
 export default function Resume() {
   const [width, setWidth] = useState(1200);
 
@@ -23,7 +21,7 @@ export default function Resume() {
         </a>
       </button>
 
-      <Document file={resumeLink} className='border-2 border-secondary/50 dark:border-dark-primary mb-2'>
+      <Document file={resume} className='border-2 border-secondary/50 dark:border-dark-primary mb-2'>
         <Page pageNumber={1} renderTextLayer={false} renderAnnotationLayer={false} scale={width > 768 ? 1.4 : 0.6}/>
       </Document>
     </div>
